@@ -1,15 +1,14 @@
 import data
 import helpers
-from helpers import is_url_reachable
 
 
 class TestUrbanRoutes:
     @classmethod
     def setup_class(cls):
-        if is_url_reachable(data.URBAN_ROUTES_URL):
+        if helpers.is_url_reachable(data.URBAN_ROUTES_URL):
             print("Connected to the Urban Routes server")
         else:
-            print("Cannot connected to the Urban Routes server. Check the server is on and still running.")
+            print("Cannot connect to the Urban Routes server. Check the server is on and still running.")
 
     def test_set_routes(self):
         # Add in S8
@@ -47,10 +46,6 @@ class TestUrbanRoutes:
         for ice_creams in range(2):
             # Add in S8
             pass
-
-    for ice_creams in range(2):
-        # Add in S8
-        pass
 
     def test_car_search_model_appears(self):
         # Add in S8
